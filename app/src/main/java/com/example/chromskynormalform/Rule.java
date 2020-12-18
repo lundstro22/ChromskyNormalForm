@@ -3,11 +3,14 @@ package com.example.chromskynormalform;
 import java.util.ArrayList;
 
 public class Rule {
+
     private char capital;
     private String a;
     private String b;
     private ArrayList<String> RHS;
     private String RHSString;
+    private String singleLowercase;
+
 
     public Rule(char capital, String a, String b){
         this.capital= capital;
@@ -17,13 +20,11 @@ public class Rule {
         RHS.add(a);
         RHS.add(b);
         RHSString= "->";
+        singleLowercase= "";
     }
 
     public char getCapital(){
         return capital;
-    }
-    public String getA(){
-        return a;
     }
 
     public String getB(){
@@ -43,6 +44,15 @@ public class Rule {
     }
 
 
+    public String getSingleLowercase() {
+        return singleLowercase;
+    }
+
+
+    public void setCapital(char capital) {
+        this.capital = capital;
+    }
+
 
     public String getRHSString(){
         RHSString= "->";
@@ -55,4 +65,11 @@ public class Rule {
         }
         return RHSString;
     }
+    public void setRHS(ArrayList<String> RHS) {
+        this.RHS = RHS;
+    }
+    public void setSingleLowercase(String singleLowercase) {
+        this.singleLowercase = singleLowercase;
+    }
+
 }
